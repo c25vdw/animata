@@ -1,24 +1,20 @@
 <template>
   <div class="site-nav">
-      <a href="" class="nav-item" @mouseover="emitHover('project')">Projects</a>
-      <a href="" class="nav-item" @mouseover="emitHover('blog')">Blog</a>
-      <a href="" class="nav-item right" @mouseover="emitHover('about')">About</a>
+      <router-link to="/projects" target="_blank" class="nav-item">Projects</router-link>
+      <a href="https://lucaszeng99.github.io/blog/" target="_blank" class="nav-item">Blog</a>
+      <router-link to="/about" target="_blank" class="nav-item">About</router-link>
+      <router-link to="/" target="_blank" class="nav-item">Home</router-link>
   </div>
 </template>
 <script>
 export default {
-    methods: {
-        emitHover(str) {
-            console.log(str)
-            this.$emit('hoverLink', str)
-        }
-    }
+
 }
 </script>
 <style lang="less" scoped>
 .site-nav {
-    position: absolute;
-    top: 0; left: 0;
+    display: flex;
+    flex-wrap: wrap;
     padding: 10px;
     margin-top: 6px;
     .nav-item {
@@ -33,10 +29,15 @@ export default {
         }
         &:hover {
             background-color: indigo;
-            color: #fff;
+            color: #ddd;
         }
     }
-    
+    a {
+        color: #000;
+    }
+    a:active, a:visited {
+        color: #000;
+    }
 }
 @keyframes hovered {
     

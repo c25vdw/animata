@@ -1,7 +1,7 @@
 <template>
   <div id="home-root">
   <entry-animation v-if="!skipped"></entry-animation>
-  <button @click="skip">Skip animation</button>
+  <button @click="skip" v-if="!skipped">Skip</button>
   <main-view v-if="skipped"></main-view>
   </div>
 </template>
@@ -43,8 +43,18 @@ export default {
   margin: 0;
   padding: 0;
   button {
-    height: 60px;
-    width: 120px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 24px;
+    height: 40px;
+    width: 60px;
+    transition: 0.6s;
+    background-color: khaki;
+    border: 2px solid seagreen;
+    &:hover {
+      background-color: indigo;
+      color: #ddd;
+      border: 2px solid seagreen;
+    }
     display: block;
     position: absolute;
     top: 60px;
