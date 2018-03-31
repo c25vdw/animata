@@ -5,7 +5,7 @@
       <router-link to="/about" target="_blank" class="nav-item">About</router-link>
       <router-link to="/" target="_blank" class="nav-item">Home</router-link>
   </div>
-</template>
+</template> 
 <script>
 export default {
 
