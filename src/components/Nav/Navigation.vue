@@ -1,9 +1,9 @@
 <template>
   <div class="site-nav">
-      <router-link to="/projects" target="_blank" class="nav-item">Projects</router-link>
+      <router-link to="/projects" class="nav-item">Projects</router-link>
       <a href="https://lucaszeng99.github.io/blog/" target="_blank" class="nav-item">Blog</a>
-      <router-link to="/about" target="_blank" class="nav-item">About</router-link>
-      <router-link to="/" target="_blank" class="nav-item">Home</router-link>
+      <router-link to="/about" class="nav-item">About</router-link>
+      <router-link to="/" class="nav-item">Home</router-link>
   </div>
 </template> 
 <script>
