@@ -5,15 +5,15 @@
           <ul class="project-list">
               <li>
                   <a href="http://calculator.lucaszzc.com" target="_blank" class="project-link">Calculator</a>
-                  <a href="http://" target="_blank" class="github-link"><img src="/static/GitHub-Mark-64px.png"></img></a>
+                  <a href="https://github.com/LucasZeng99/vue-simple-calculator" target="_blank" class="github-link"><img src="/static/GitHub-Mark-64px.png"></img></a>
                   </li>
               <li>
                   <a href="http://chatroom.lucaszzc.com" target="_blank" class="project-link">Chatroom</a>
-                  <a href="http://" target="_blank" class="github-link"><img src="/static/GitHub-Mark-64px.png"></img></a>
+                  <a href="https://github.com/LucasZeng99/chatroom" target="_blank" class="github-link"><img src="/static/GitHub-Mark-64px.png"></img></a>
                   </li>
               <li>
                   <a href="http://weather.lucaszzc.com" target="_blank" class="project-link">Weather Panel</a>
-                  <a href="http://" target="_blank" class="github-link"><img src="/static/GitHub-Mark-64px.png"></img></a>
+                  <a href="https://github.com/LucasZeng99/vue-weather-panel" target="_blank" class="github-link"><img src="/static/GitHub-Mark-64px.png"></img></a>
                   </li>
           </ul>
       </div>
