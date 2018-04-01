@@ -3,11 +3,14 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import ElementUI from 'element-ui'
+import VueAnalytics from 'vue-analytics'
 import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.config.productionTip = false
-Vue.use(ElementUI)
+Vue.use(VueAnalytics, {
+  id: 'UA-115296909-2',
+  router
+})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
