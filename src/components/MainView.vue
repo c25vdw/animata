@@ -1,6 +1,5 @@
 <template>
-  <div class="site-main" :class="'{is-active: !skipped}'">
-    
+  <div class="site-main" :class="{'is-active': skipped}">
     <div class="intro">
       <h1>Lucas Zeng</h1>
       <small>non-stop messing around.</small>
@@ -15,6 +14,7 @@ import SiteNav from './Nav/Navigation.vue'
 
 export default {
   name: 'MainView',
+  props: ['skipped'],
   components: {
       SiteNav,
   },
@@ -24,12 +24,8 @@ export default {
 <style lang="less" scoped>
 .site-main {
   margin:0;
-  transition: 3s;
-  & .is-active {
-      opacity: 0;
-      animation: appear 0.5s ease 9.2s forwards;
-  }
-
+  transition: 2.5s;
+  opacity: 0;
   .intro {
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: block;
@@ -43,6 +39,9 @@ export default {
       font-size: 80px;
     }
   }
+  }
+.is-active {
+      opacity: 1;
   }
 @keyframes appear{
     0%   { opacity: 0; }

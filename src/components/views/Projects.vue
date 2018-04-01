@@ -36,6 +36,7 @@ export default {
     list-style: none;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     .projects {
+        animation: appear 1s ease;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -68,5 +69,9 @@ export default {
             color: #333;
         }
     }
+}
+@keyframes appear {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
 }
 </style>

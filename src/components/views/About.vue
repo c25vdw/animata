@@ -32,6 +32,7 @@ export default {
         display: inline-block;
     }
     .about {
+        animation: appear 1s ease;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -48,5 +49,9 @@ export default {
         }
 
     }
+}
+@keyframes appear {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
 }
 </style>

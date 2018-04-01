@@ -2,7 +2,7 @@
   <div id="home-root">
   <entry-animation v-if="!skipped"></entry-animation>
   <button @click="skip" v-if="!skipped">Skip</button>
-  <main-view v-if="skipped"></main-view>
+  <main-view :skipped="skipped"></main-view>
   </div>
 </template>
 
@@ -61,4 +61,6 @@ export default {
     right: 20px;
   }
 }
+
+
 </style>
