@@ -1,17 +1,14 @@
 <template>
   <div id="home-root">
-  <entry-animation v-if="!skipped"></entry-animation>
   <button @click="skip" v-if="!skipped">Skip</button>
   <main-view :skipped="skipped"></main-view>
   </div>
 </template>
 
 <script>
-import EntryAnimation from './EntryAnimation.vue'
 import MainView from './MainView.vue'
 export default {
   components: {
-    'entry-animation': EntryAnimation,
     'main-view': MainView,
   },
   data() {
