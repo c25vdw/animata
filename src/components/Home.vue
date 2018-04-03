@@ -1,6 +1,5 @@
 <template>
   <div id="home-root">
-  <button @click="skip" v-if="!skipped">Skip</button>
   <main-view :skipped="skipped"></main-view>
   </div>
 </template>
@@ -25,7 +24,7 @@ export default {
         if (!this.skipped) {
         this.skipped = true
       }
-      }, 9200)
+      }, 100)
       
     },
     skip() {
