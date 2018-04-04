@@ -1,5 +1,5 @@
 <template>
-  <div class="site-main" :class="{'is-active': skipped}">
+  <div class="site-main">
     <div class="intro">
       <h1>Lucas Zeng</h1>
       <small>non-stop messing around.</small>
@@ -24,8 +24,7 @@ export default {
 <style lang="less" scoped>
 .site-main {
   margin:0;
-  transition: 2.5s;
-  opacity: 0;
+  animation: appear 1s ease;
   .intro {
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: block;
@@ -39,9 +38,6 @@ export default {
       font-size: 80px;
     }
   }
-  }
-.is-active {
-      opacity: 1;
   }
 @keyframes appear{
     0%   { opacity: 0; }

@@ -32,6 +32,7 @@ export default {
         display: inline-block;
     }
     .about {
+        margin-top: 30px;
         animation: appear 1s ease;
         position: absolute;
         top: 50%;

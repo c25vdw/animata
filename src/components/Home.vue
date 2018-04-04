@@ -20,12 +20,12 @@ export default {
   },
   methods: {
     showMainAfterAnimation() {
-      setTimeout(() => {
-        if (!this.skipped) {
-        this.skipped = true
-      }
-      }, 100)
-      
+      // setTimeout(() => {
+      //   if (!this.skipped) {
+      //   this.skipped = true
+      // }
+      // }, 100)
+      this.skip()
     },
     skip() {
       this.skipped = true
