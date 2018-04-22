@@ -1,9 +1,9 @@
 <template>
   <div class="site-nav">
-      <router-link to="/projects" class="nav-item">Projects</router-link>
-      <a href="https://lucaszeng99.github.io/blog/" target="_blank" class="nav-item">Blog</a>
-      <router-link to="/about" class="nav-item">About</router-link>
-      <router-link to="/" class="nav-item">Home</router-link>
+      <router-link to="/projects" class="nav-item item-1">Projects</router-link>
+      <a href="https://lucaszeng99.github.io/blog/" target="_blank" class="nav-item item-2">Blog</a>
+      <router-link to="/about" class="nav-item item-3">About</router-link>
+      <router-link to="/" class="nav-item item-4">Home</router-link>
   </div>
 </template> 
 <script>
@@ -13,17 +13,39 @@ export default {
 </script>
 <style lang="less" scoped>
 .site-nav {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    margin-top: 6px;
+    display: grid;
+    margin: auto;
+    grid-auto-columns: minmax(100px, auto);
+    grid-auto-rows: minmax(2rem, auto);
+    grid-template-areas:
+        ". item-1 ."
+        "item-2 . item-3"
+        ". item-4 .";
     .nav-item {
-        background-color: khaki;
-        border:2px solid seagreen;
-        padding: 6px;  
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 24px;
-        transition: 0.5s;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        &.item-1 {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            grid-area: item-1;
+        }
+        &.item-2 {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            grid-area: item-2;
+        }
+        &.item-3 {
+            grid-column: 3/4;
+            grid-row: 2/3;
+            grid-area: item-3;
+        }
+        &.item-4 {
+            grid-column: 2/3;
+            grid-row: 3/4;
+            grid-area: item-4;
+        }
+
         &:active, &:visited {
             color: #000;
         }

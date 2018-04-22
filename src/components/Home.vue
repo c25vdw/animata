@@ -1,14 +1,18 @@
 <template>
   <div id="home-root">
+  <happy-birthday :skipped="skipped"></happy-birthday>
   <main-view :skipped="skipped"></main-view>
   </div>
 </template>
 
 <script>
 import MainView from './MainView.vue'
+import Happybday from './Happybday.vue'
+
 export default {
   components: {
     'main-view': MainView,
+    'happy-birthday': Happybday,
   },
   data() {
     return {
@@ -16,16 +20,15 @@ export default {
     }
   },
   mounted() {
-    this.showMainAfterAnimation()
+    this.showMainAfterAnimation(4000) // after 4000 miliseconds then sohw the main view
   },
   methods: {
-    showMainAfterAnimation() {
-      // setTimeout(() => {
-      //   if (!this.skipped) {
-      //   this.skipped = true
-      // }
-      // }, 100)
-      this.skip()
+    showMainAfterAnimation(timeout) {
+      setTimeout(() => {
+        if (!this.skipped) {
+        this.skip()
+      }
+      }, timeout)
     },
     skip() {
       this.skipped = true
@@ -38,6 +41,7 @@ export default {
 #home-root {
   margin: 0;
   padding: 0;
+  font-size: 16px; 
   button {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 24px;
