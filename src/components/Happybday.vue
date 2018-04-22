@@ -2,28 +2,28 @@
   <div class="happy-bd-root" v-if="!skipped">
     <div id="stage-balloon">
       <div class="balloon balloon-1">
-        <p class="text">一</p>
+        <p class="text">妈</p>
       </div>
       <div class="balloon balloon-2">
-        <p class="text">二</p>
+        <p class="text">,</p>
       </div>
       <div class="balloon balloon-3">
-        <p class="text">三</p>
+        <p class="text">生</p>
       </div>
       <div class="balloon balloon-4">
-        <p class="text">四</p>
+        <p class="text">日</p>
       </div>
       <div class="balloon balloon-5">
-        <p class="text">五</p>
+        <p class="text">快</p>
       </div>
       <div class="balloon balloon-6">
-        <p class="text">六</p>
+        <p class="text">乐</p>
       </div>
       <div class="balloon balloon-7">
-        <p class="text">七</p>
+        <p class="text">开</p>
       </div>
       <div class="balloon balloon-8">
-        <p class="text">八</p>
+        <p class="text">心</p>
       </div>
     </div>
     <div id="stage-popme">
@@ -63,6 +63,8 @@ export default {
   text-align: center;
   .text {
     position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 48px;
     top: 50%;
     transform: translateY(-50%);
   }
@@ -74,24 +76,51 @@ export default {
   &.balloon-6 { left: 56%; }
   &.balloon-7 { left: 75%; }
   &.balloon-8 { left: 84%; }
-  width: 80px; height: 100px;
+  width: 120px; height: 140px;
   background-color: burlywood;
   border-radius: 50%;
-  ::after {
-    position: absolute;
-    bottom: 50%; left: 50%;
-    width: 2px; height: 20px;
-    border: 4px solid blue;
-  }
 }
-#stage-balloon .balloon-1 { animation: floatup 4s ease 1s forwards; }
-#stage-balloon .balloon-2 { animation: floatup 4s ease 1.15s forwards; }
-#stage-balloon .balloon-3 { animation: floatup 4s ease 1.3s forwards; }
-#stage-balloon .balloon-4 { animation: floatup 4s ease 1.31s forwards; }
-#stage-balloon .balloon-5 { animation: floatup 4s ease 1.6s forwards; }
-#stage-balloon .balloon-6 { animation: floatup 4s ease 1.7s forwards; }
-#stage-balloon .balloon-7 { animation: floatup 4s ease 1.75s forwards; }
-#stage-balloon .balloon-8 { animation: floatup 4s ease 2.1s forwards; }
+
+#stage-balloon .balloon-1 { 
+  animation: floatup 4s ease 1s forwards; 
+  background-color: #e53935;
+  color: #B2EBF2;
+  }
+#stage-balloon .balloon-2 {
+  animation: floatup 4s ease 1.15s forwards; 
+  background-color: #D81B60;
+  color: #FFF9C4;
+  }
+#stage-balloon .balloon-3 { 
+  animation: floatup 4s ease 1.3s forwards; 
+  background-color: #F06292;
+  color: #1A237E;
+  }
+#stage-balloon .balloon-4 { 
+  animation: floatup 4s ease 1.31s forwards; 
+  background-color: #FF9800;
+  color: #4527A0;
+  }
+#stage-balloon .balloon-5 { 
+  animation: floatup 4s ease 1.6s forwards; 
+  background-color: #4FC3F7;
+  color: #880E4F;
+  }
+#stage-balloon .balloon-6 { 
+  animation: floatup 4s ease 1.7s forwards; 
+  background-color: #E040FB;
+  color: #BBDEFB;
+  }
+#stage-balloon .balloon-7 { 
+  animation: floatup 4s ease 1.75s forwards; 
+  background-color: #FFEB3B;
+  color: #4527A0;
+  }
+#stage-balloon .balloon-8 { 
+  animation: floatup 4s ease 2.1s forwards; 
+  background-color: #AB47BC;
+  color: #FFF9C4;
+  }
 
 #stage-popme {
   width: 100%; height: 100%;
@@ -100,15 +129,24 @@ export default {
   left: 0;
   top: 0;
   opacity: 0;
-  animation: popup @transition-time ease-in @half-time forwards;
+  animation: popup @transition-time ease-in-out @half-time forwards,
+             shiftout 2s ease-in-out calc(@total-time - 2s) forwards;
   .popme-image {
-    width: 40px;
+    animation: popup @transition-time ease-in-out @half-time forwards;
+    width: 300px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
 @keyframes popup {
   0%   { opacity: 0; }
   100% { opacity: 1; }
+}
+@keyframes shiftout {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
 }
 @keyframes floatup {
   0%   { top: 100%; }
