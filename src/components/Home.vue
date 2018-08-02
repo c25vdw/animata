@@ -1,6 +1,6 @@
 <template>
   <div id="home-root">
-  <happy-birthday :skipped="skipped"></happy-birthday>
+  <!-- <happy-birthday :skipped="skipped"></happy-birthday> -->
   <main-view :skipped="skipped"></main-view>
   </div>
 </template>
@@ -16,7 +16,7 @@ export default {
   },
   data() {
     return {
-      skipped: false,
+      skipped: true,
     }
   },
   mounted() {
