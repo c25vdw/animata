@@ -20,7 +20,7 @@ export default {
     }
   },
   mounted() {
-    this.showMainAfterAnimation(8000) // after 4000 miliseconds then sohw the main view
+    // this.showMainAfterAnimation(8000) // after 4000 miliseconds then sohw the main view
   },
   methods: {
     showMainAfterAnimation(timeout) {
