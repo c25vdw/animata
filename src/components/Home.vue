@@ -7,12 +7,12 @@
 
 <script>
 import MainView from './MainView.vue'
-import Happybday from './Happybday.vue'
+// import Happybday from './Happybday.vue'
 
 export default {
   components: {
     'main-view': MainView,
-    'happy-birthday': Happybday,
+    // 'happy-birthday': Happybday,
   },
   data() {
     return {
