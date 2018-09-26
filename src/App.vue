@@ -9,9 +9,9 @@ export default {
   name: 'App'
 }
 </script>
-<style>
-* {
-  margin: 0;
-  padding: 0;
+<style lang="less">
+@import "./less/common.less";
+html {
+  font-size: 18px;
 }
 </style>

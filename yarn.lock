@@ -615,9 +615,9 @@ babel-plugin-check-es2015-constants@^6.22.0:
   dependencies:
     babel-runtime "^6.22.0"
 
-babel-plugin-component@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-component/-/babel-plugin-component-1.1.0.tgz#74fa3446814bca990f52bcad6700465361b011b7"
+babel-plugin-component@^1.1.1:
+  version "1.1.1"
+  resolved "http://registry.npm.taobao.org/babel-plugin-component/download/babel-plugin-component-1.1.1.tgz#9b023a23ff5c9aae0fd56c5a18b9cab8c4d45eea"
   dependencies:
     "@babel/helper-module-imports" "7.0.0-beta.35"
 
@@ -2282,9 +2282,9 @@ electron-to-chromium@^1.2.7, electron-to-chromium@^1.3.30:
   version "1.3.42"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.42.tgz#95c33bf01d0cc405556aec899fe61fd4d76ea0f9"
 
-element-ui@^2.2.2:
-  version "2.3.6"
-  resolved "https://registry.yarnpkg.com/element-ui/-/element-ui-2.3.6.tgz#6771aa41a51bc967bdaad64e429ff50b528b15e3"
+element-ui@^2.4.7:
+  version "2.4.7"
+  resolved "http://registry.npm.taobao.org/element-ui/download/element-ui-2.4.7.tgz#073b404222815c08ba2e68b39ec8e6ff7b7b13e0"
   dependencies:
     async-validator "~1.8.1"
     babel-helper-vue-jsx-merge-props "^2.0.0"
