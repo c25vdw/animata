@@ -5,7 +5,7 @@
     </div>
       <small id="slogan">non-stop messing around.</small>
       <br><br>
-      <site-nav/>
+      
   </div>
 </template>
 

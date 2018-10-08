@@ -1,18 +1,17 @@
 <template>
   <div class="about content">
-      <div class="about-title"><h1>About me.</h1></div>
+      <div class="about-title"><h1>About me</h1></div>
       <div class="about-intro">
-          <h2>Who I am</h2>
-<pre>
-A student @University of Alberta, majoring in Computer Engineering.
- 
-Lucas is not my formal name. I'm also Zichang Zeng, 曾子畅.
-I love programming, and Javascript especially(for now). I was deeply
-touched by how Vue.js works and how people work with it.
-
-</pre>
+<p>
+Student @University of Alberta, majoring in Software Engineering.
+</p>
       </div>
-      <site-nav/>
+      <div class="about-social">
+        <p>Find me on:</p>
+        <a href="https://github.com/LucasZeng99" target="_blank"><img class="icon" src="../icons/github.svg" alt=""></a>
+        <a href="https://www.linkedin.com/in/zichangzeng/" target="_blank"><img class="icon" src="../icons/linkedin.svg" alt=""></a>
+      </div>
+      
   </div>
 </template>
 
@@ -25,5 +24,25 @@ export default {
 <style lang="less" scoped>
 @import "../../less/content";
 @import "../../less/keyframes";
+p {
+  font-size: 1.3rem;
+}
+.about {
+  padding-top: 300px;
+}
 
+.about-title {
+  margin-bottom: 30px;
+}
+
+.about-social {
+  margin-top: 30px;
+  p {
+    margin-bottom: 10px;
+  }
+  img.icon {
+    height: 2rem;
+    margin: 0 8px;
+  }
+}
 </style>

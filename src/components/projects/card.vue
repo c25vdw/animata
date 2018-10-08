@@ -1,10 +1,11 @@
 <template>
-    <div class="project-card">
-
-    </div>
+    
 </template>
 <script>
 export default {
-    name: 'project-card'
+    name: 'project-card',
+    props: {
+        item: Object
+    },
 }
 </script>
